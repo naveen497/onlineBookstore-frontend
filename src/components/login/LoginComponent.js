@@ -50,7 +50,7 @@ class LoginComponent extends React.Component {
                     <div><br/></div>
                     {/*<Reveal effect="fadeInUp">*/}
                     <Zoom left>
-                    <h1 className="h3 mb-3 font-weight-normal">Log in to your account</h1>
+                    <h1 className="h3 mb-3 font-weight-normal">Log In</h1>
                     </Zoom>
                     <br/>
                     <Fade left>
@@ -83,7 +83,7 @@ class LoginComponent extends React.Component {
                                        }
                                    )}
                                    id="password" placeholder="Password"/>
-                    {/*</Shake>    */}
+
                     </Fade>
                                 <br/>
                                 <Jello>

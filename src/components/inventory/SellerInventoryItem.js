@@ -1,5 +1,5 @@
 import * as React from "react";
-import './OrderComponent.css';
+import './InventoryComponent.css';
 import {getAllBooks, searchBooksByISBN, deleteBookListing,editBookListing} from "../../services/BookService";
 import t from 'typy';
 import {Link, withRouter} from "react-router-dom";
@@ -122,7 +122,7 @@ class SellerInventoryItem extends React.Component {
                                                                 </button>
                                                             </div>}
                                                             {this.state.editing &&
-                                                                <button class="btn btn-success"
+                                                                <button class="btn btn-success float-right"
                                                                     onClick={() => {
                                                                         this.editBookListing(this.props.book.isbn.identifier,this.state.price,this.state.quantity)
                                                                         this.setState({editing: false})

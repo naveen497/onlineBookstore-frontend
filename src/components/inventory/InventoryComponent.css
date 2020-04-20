@@ -1,0 +1,23 @@
+/*.card {
+    border-radius: 30px;
+}*/
+
+.card-fixed-size {
+    max-height: 400px;
+}
+
+.card-img-top:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 8px 12px 31px -10px black;
+}
+
+.card-title {
+    font-family: Candara;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}

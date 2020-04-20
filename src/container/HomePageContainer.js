@@ -9,15 +9,17 @@ import SearchBoxComponent from "../components/SearchBoxComponent";
 import BookDetailsComponent from "../components/BookDetailsComponent";
 import CartComponent from "../components/cart/CartComponent";
 import OrderComponent from "../components/orders/OrderComponent";
+import InventoryComponent from "../components/inventory/InventoryComponent";
 import RetailComponent from "../components/retail/RetailComponent";
 import FooterComponent from "../components/FooterComponent";
-import Fade from 'react-reveal/Fade';
+import {AboutComponent} from "../components/about/AboutComponent";
+import PrivacyPolicyComponent from "../components/privacy/PrivacyPolicyComponent";
 
 class HomePageContainer extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="all-bg-color">
                 <BookManagerHeadingComponentCopy/>,
                 <Route path="/"
                        exact={true}
@@ -26,6 +28,14 @@ class HomePageContainer extends React.Component {
                                <SearchBoxComponent
                                    searchMode={true}
                                    {...props}/>]
+                       }
+                       }/>
+
+                <Route path="/about"
+                       exact={true}
+                       render={() => {
+                           return [
+                               <AboutComponent/>]
                        }
                        }/>
 
@@ -69,10 +79,17 @@ class HomePageContainer extends React.Component {
                                 exact={true}
                                 component={OrderComponent}
                 />
+                <ProtectedRoute path="/inventory"
+                                exact={true}
+                                component={InventoryComponent}
+                />
                 <ProtectedRoute path="/retail"
                                 exact={true}
                                 component={RetailComponent}
                 />
+                <Route path="/privacy"
+                       exact={true}
+                       component={PrivacyPolicyComponent}/>
                 <FooterComponent/>
             </div>
         );

@@ -1,5 +1,5 @@
 import {BACKEND_API} from "../common/constants";
-
+import _ from 'lodash';
 
 
 export const addToCart = async(item, user) => {
@@ -15,9 +15,11 @@ export const addToCart = async(item, user) => {
 }
 
 
-export const getCartItemsForUser = (user) => {
-     return fetch(`${BACKEND_API}/api/cart/getCartItems/${user}`)
+export const getCartItemsForUser = async (user) => {
+     let response = await fetch(`${BACKEND_API}/api/cart/getCartItems/${user}`)
         .then(response => response.json())
+
+    return _.get(response, ['items'],[])
 }
 
 

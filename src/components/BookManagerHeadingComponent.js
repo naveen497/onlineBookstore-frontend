@@ -79,14 +79,24 @@ class BookManagerHeadingComponent extends React.Component {
                         </li>
 
                         <li className="nav-item">
-                            <Link className="nav-link"
-                                  to={`/orders`}>
-                                <button className={"btn font-color " +
-                                (this.props.session.userType === 'SELLER'? 'btn-seller-navbar' : 'btn-buyer-navbar')}>
-                                    {this.props.session.userType == 'SELLER' && <span>My Inventory</span>}
-                                    {this.props.session.userType == 'BUYER' && <span>My Orders</span>}
-                                </button>
-                            </Link>
+                            {this.props.session.userType == 'BUYER' &&
+                                <Link className="nav-link"
+                                      to={`/orders`}>
+                                    <button className={"btn font-color " +
+                                    (this.props.session.userType === 'SELLER'? 'btn-seller-navbar' : 'btn-buyer-navbar')}>
+                                        <span>My Orders</span>
+                                    </button>
+                                </Link>
+                            }
+                            {this.props.session.userType == 'SELLER' &&
+                                <Link className="nav-link"
+                                      to={`/inventory`}>
+                                    <button className={"btn font-color " +
+                                    (this.props.session.userType === 'SELLER'? 'btn-seller-navbar' : 'btn-buyer-navbar')}>
+                                        <span>My Inventory</span>
+                                    </button>
+                                </Link>
+                            }
                         </li>
                         {this.props.session.username && <li className="nav-item">
                             <Link className="nav-link "

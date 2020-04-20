@@ -1,47 +1,48 @@
 
 .jumbotron {
-    background-color: #563D7C;
     margin-top: 0px;
 }
 
-.card {
-    border-radius: 300px;
+.bg-picture {
+    background-color: #563D7C;
 }
 
-.searchbar{
+
+.searchbar {
     margin-bottom: auto;
     margin-top: auto;
     height: 60px;
     background-color: #FCCD04;
     border-radius: 30px;
     padding: 10px;
+
 }
 
-.search_input{
+.search_input {
     color: darkslategray;
     font-family: Roboto;
     border: 0;
     outline: 0;
     background: none;
     width: 0;
-    caret-color:transparent;
+    caret-color: transparent;
     line-height: 40px;
     transition: width 0.4s linear;
 }
 
-.searchbar:hover > .search_input{
+.searchbar:hover > .search_input {
     padding: 0 10px;
     width: 450px;
-    caret-color:red;
+    caret-color: red;
     transition: width 0.4s linear;
 }
 
-.searchbar:hover > .search_icon{
+.searchbar:hover > .search_icon {
     background: white;
     color: #e74c3c;
 }
 
-.search_icon{
+.search_icon {
     height: 40px;
     width: 40px;
     float: right;
@@ -50,11 +51,11 @@
     align-items: center;
     border-radius: 50%;
     color: #e74c3c;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 .search-results-color {
-    background-color: #FCCD04;
+    background-color: #FFFFFF;
 }
 
 .card-fixed-size {

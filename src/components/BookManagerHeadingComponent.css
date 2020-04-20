@@ -44,11 +44,19 @@
     color: white;
 }
 
+.font-color:hover {
+    color: #FFE484;
+}
+
 .logout:hover {
     color: red;
 }
 
 .profile-btn {
     border: 1px white;
+}
+
+.logo-color {
+    color: #FFE484;
 }
 

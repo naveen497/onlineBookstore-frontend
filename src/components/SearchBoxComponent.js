@@ -73,6 +73,8 @@ export default class SearchBoxComponent extends React.Component {
                     </div>
                 </div>
 
+
+
                 {this.props.searchMode && <div className="container">
                         <Fade left cascade>
                             <h2 className="carousel-style">Most Relevant Books</h2>

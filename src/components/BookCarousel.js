@@ -46,7 +46,7 @@ export default class BookCarousel extends React.Component {
 
     render() {
         return (
-            <div className="container carousel-color">
+            <div className="container carousel-color carousel-bg">
                 &nbsp;
                 &nbsp;
                 <Carousel

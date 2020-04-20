@@ -7,7 +7,7 @@ export default class SearchResultsComponent extends React.Component {
 
 
     render() {
-        return(
+        return (
             <div className="search-results-color">
                 &nbsp;
                 <h1 className="carousel-style search-heading">Search Results:</h1>
@@ -19,27 +19,39 @@ export default class SearchResultsComponent extends React.Component {
                                     this.props.books &&
                                     this.props.books.map(book =>
                                         <div
-                                            className="col-sm-4 col-md-2">
+                                            className="col-sm-4 col-md-3">
                                             <Link
                                                 to={`/bookDetails/${t(
                                                     book,
                                                     'volumeInfo.industryIdentifiers[0].identifier').safeObject}`}>
                                                 <div
-                                                    className="card card-fixed-size">
+                                                    className="text-center card-fixed-size">
                                                     {book.volumeInfo.imageLinks.smallThumbnail
                                                     &&
                                                     <img
-                                                        className="card-img-top"
+                                                        className="img-size"
                                                         src={book.volumeInfo.imageLinks.smallThumbnail}
-                                                        alt="Card image cap"/>}
+                                                        alt=""/>}
                                                 </div>
                                                 <div
-                                                    className="card-body">
-                                                    <a className="search-title card-title">
+                                                    className="img-title text-center carousel-style">
+                                                    <a>
                                                         {book.volumeInfo.title}
                                                     </a>
                                                 </div>
+                                                <button className="btn btn-block text-btn-color search-btn specific-btn-color">
+                                                    <i className="fas fa-plus elem"></i>
+                                                    &nbsp;
+                                                    More Details
+                                                </button>
+                                                <button className="btn btn-block btn-dark search-btn">
+                                                    <i className="fa fa-heart" aria-hidden="true"></i>
+                                                    &nbsp;
+                                                    Add to Wishlist
+                                                </button>
                                             </Link>
+                                            <br/>
+                                            <br/>
                                         </div>
                                     )
                                 }
