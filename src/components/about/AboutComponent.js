@@ -2,6 +2,8 @@ import React from "react";
 import './AboutComponent.css'
 import guin from '../../guin.jpg'
 import rv from '../../ritvik.jpg'
+import dk from '../../deepak.jpg'
+import nv from '../../nv.jpg'
 
 
 export class AboutComponent extends React.Component {
@@ -42,10 +44,10 @@ export class AboutComponent extends React.Component {
                 <div className="row">
                     <div className="col-md-6 col-lg-3">
                         <div className="card">
-                            <img className="card-img-top" alt="" src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/68351855_2373721869388434_4725716274854756352_o.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=X-BN3tABQb8AX_KyXwA&_nc_ht=scontent-lga3-1.xx&oh=5868bd3f8f964ee3dbbc47c1de3dde63&oe=5EC0B4E9"/>
+                            <img className="card-img-top" alt="" src={dk}/>
                             <div className="card-body">
                                 <br/>
-                                <h5 className="card-title text-center">Deepak Achar</h5>
+                                <h5 className="card-title text-center">Deepak Kumar</h5>
 
                                 <a href="https://www.linkedin.com/in/deepak-kumar-bb1810115/" className="btn btn-dark about-btn">
                                     <i className="fab fa-linkedin-in"></i></a>
@@ -78,7 +80,7 @@ export class AboutComponent extends React.Component {
                     </div>
                     <div className="col-md-6 col-lg-3">
                         <div className="card">
-                            <img className="card-img-top" alt="" src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/22046087_879070048915280_3400401717568385733_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=cQgmMWidwEoAX8B-0Ou&_nc_ht=scontent-lga3-1.xx&oh=2b01ba5cfbbe2c727e6126232d91e989&oe=5EC373D5"/>
+                            <img className="card-img-top" alt="" src={nv}/>
                             <div className="card-body">
                                 <br/>
                                 <h5 className="card-title text-center">Naveen Chiluka</h5>
